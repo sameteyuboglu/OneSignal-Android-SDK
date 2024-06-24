@@ -444,6 +444,7 @@ internal class WebViewManager(
 
     // Allow Chrome Remote Debugging if OneSignal.LOG_LEVEL.DEBUG or higher
     private fun enableWebViewRemoteDebugging() {
+        // It has been closed to prevent errors from appearing in Apk Security Tests.
         WebView.setWebContentsDebuggingEnabled(false)
         // if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT && Logging.atLogLevel(LogLevel.DEBUG)
         // ) {
